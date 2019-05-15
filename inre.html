@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
 <title>HTML Tutorial</title>
+    <script>
+      var version = "0.0.1";
+      
+      function init(){
+        bg_canvas = document.getElementById("background_canvas");
+        bg_ctx = main_canvas.getContext('2d');
+        main_canvas = document.getElementById("main_canvas");
+        main_ctx = main_canvas.getContext('2d');
+      }
+    </script>
+  </head>
 <body>
 
 <h2>My First JavaScript</h2>
@@ -12,8 +24,8 @@ Click me to display Date and Time.</button>
 <p id="demo"></p>
   
   <div id="game_object" style="position: relative;">
-    <canvas id="background_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px;"></canvas>
-    <canvas id="main_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px;"></canvas>
+    <canvas id="background_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
+    <canvas id="main_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
   </div>
 
 </body>
