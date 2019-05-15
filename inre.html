@@ -15,8 +15,8 @@
       }
       
       function mouse(e){
-        var x = e.pageX;
-        var y = e.pageY;
+        var x = e.pageX - document.getElementById("game_object").offsetLeft;
+        var y = e.pageY - document.getElementById("game_object").offsetTop;
         document.getElementById('x').innerHTML = x;
         document.getElementById('y').innerHTML = y;
       }
@@ -34,7 +34,7 @@ Click me to display Date and Time.</button>
  
   <div id="game_object" style="position: relative;">
     <canvas id="background_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
-    <canvas id="main_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
+    <canvas id="main_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;" onmousemove="move();"></canvas>
   </div>
   
   <span id='x'></span><br>
