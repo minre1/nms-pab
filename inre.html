@@ -13,6 +13,13 @@
         
         main_ctx.drawRect(10,10,50,50);
       }
+      
+      function mouse(e){
+        var x = e.pageX;
+        var y = e.pageY;
+        document.getElementById('x').innerHTML = x;
+        document.getElementById('y').innerHTML = y;
+      }
     </script>
   </head>
 <body>
@@ -24,11 +31,14 @@ onclick="document.getElementById('demo').innerHTML = Date()">
 Click me to display Date and Time.</button>
 
 <p id="demo"></p>
-  
+ 
   <div id="game_object" style="position: relative;">
     <canvas id="background_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
     <canvas id="main_canvas" style="background-color: grey; position: absolute; top: 0px; left: 0px; width: 800px; height: 600px;"></canvas>
   </div>
-
+  
+  <span id='x'></span><br>
+  <span id='y'></span><br>
+         
 </body>
 </html>
