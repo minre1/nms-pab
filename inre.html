@@ -4,7 +4,7 @@
 <title>HTML Tutorial</title>
     <script>
       var version = "0.0.1";
-      init();
+
       function init(){
         bg_canvas = document.getElementById("background_canvas");
         bg_ctx = main_canvas.getContext('2d');
@@ -12,7 +12,7 @@
         main_ctx = main_canvas.getContext('2d');
         
         main_ctx.fillStyle = "red";
-        main_ctx.drawRect(10,10,50,50);
+        main_ctx.fillRect(10,10,50,50);
       }
       
       function mouse(e){
@@ -23,13 +23,9 @@
       }
     </script>
   </head>
-<body>
+<body onload="init()">
 
 <h2>My First JavaScript</h2>
-
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
 
 <p id="demo"></p>
   
